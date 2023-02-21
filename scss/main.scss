@@ -79,23 +79,39 @@ body {
 			color: $white;
 			text-transform: uppercase;
 			h1 {
-				font-size: 4rem;
+				font-size: 5rem;
 				.name {
 					color: $primary;
 				}
 			}
 			p {
 				margin: 1em;
-				font-weight: 300;
 			}
 			.action {
-				margin-top: 2em;
+				margin-top: 5em;
 			}
 		}
 	}
 }
 .section-about {
-	height: 100vh;
 	background-color: $white;
+	&__about {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		img {
+			border: 1px solid $primary;
+			margin: 0 2em;
+		}
+		.paragraphs {
+			p {
+				max-width: 600px;
+				margin: 2em 0;
+			}
+		}
+	}
+}
+.section-projects {
+	height: 100vh;
 }
 @import 'desktop';

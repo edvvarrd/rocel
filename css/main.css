@@ -9,6 +9,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
 
 .wrapper {
@@ -77,6 +78,25 @@ html {
 }
 .button:hover .button__vertical {
   transform: scaleY(0);
+}
+
+.section {
+  padding-bottom: 64px;
+}
+.section__heading {
+  position: relative;
+  margin: 2em 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.section__heading::before {
+  content: "";
+  height: 3px;
+  width: 17px;
+  background-color: #ff597b;
+  position: absolute;
+  bottom: -4px;
 }
 
 body {
@@ -161,22 +181,37 @@ body {
   text-transform: uppercase;
 }
 .section-front__hero-heading h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .section-front__hero-heading h1 .name {
   color: #ff597b;
 }
 .section-front__hero-heading p {
   margin: 1em;
-  font-weight: 300;
 }
 .section-front__hero-heading .action {
-  margin-top: 2em;
+  margin-top: 5em;
 }
 
 .section-about {
-  height: 100vh;
   background-color: #eeeeee;
+}
+.section-about__about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section-about__about img {
+  border: 1px solid #ff597b;
+  margin: 0 2em;
+}
+.section-about__about .paragraphs p {
+  max-width: 600px;
+  margin: 2em 0;
+}
+
+.section-projects {
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
