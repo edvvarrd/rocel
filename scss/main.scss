@@ -2,9 +2,6 @@
 @use 'colors' as *;
 @use 'components';
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 	line-height: 2.6rem;
@@ -48,19 +45,16 @@ body {
 		}
 	}
 }
-.navbar-toggler {
+.nav-toggle {
 	position: fixed;
-	top: 1.5rem;
-	right: 1.5rem;
+	top: 15px;
+	right: 15px;
 	padding: 0.2em 0.2em;
 	font-size: 2.5rem;
 	color: $white;
-	border: none;
 	border-radius: 8px;
 	background: rgba(0, 0, 0, 0.4);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-	border-left: 1px solid rgba(0, 0, 0, 0.5);
-	border-right: 1px solid rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(0, 0, 0, 0.5);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(5px);
 	z-index: 20;
@@ -69,7 +63,6 @@ body {
 .section-front {
 	&__hero {
 		position: relative;
-		width: 100%;
 		height: 100vh;
 		background-image: url('../img/front-page-background.png');
 		background-size: cover;
@@ -99,7 +92,7 @@ body {
 			p {
 				margin: 1em;
 			}
-			.action {
+			a {
 				margin-top: 5em;
 			}
 		}
@@ -131,8 +124,8 @@ body {
 				top: 0;
 				width: 15px;
 				height: 15px;
-				border-top: 2px solid $secondary;
-				border-left: 2px solid $secondary;
+				border-top: 2px solid $primary;
+				border-left: 2px solid $primary;
 			}
 			&::after {
 				content: '';
@@ -141,8 +134,8 @@ body {
 				bottom: 0;
 				width: 15px;
 				height: 15px;
-				border-bottom: 2px solid $secondary;
-				border-right: 2px solid $secondary;
+				border-bottom: 2px solid $primary;
+				border-right: 2px solid $primary;
 			}
 		}
 	}
