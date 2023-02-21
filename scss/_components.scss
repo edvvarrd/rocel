@@ -1,0 +1,76 @@
+@use 'colors' as *;
+.wrapper {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+.button {
+	--offset: 10px;
+	--border-size: 2px;
+	position: relative;
+	padding: 1em 2em;
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.5rem;
+	letter-spacing: 0.2em;
+	font-weight: 500;
+	box-shadow: inset 0 0 0 var(--border-size) $primary;
+	transition: background-color 0.5s;
+	cursor: pointer;
+	&:hover {
+		background-color: rgba($primary, 0.1);
+	}
+
+	&__horizontal,
+	&__vertical {
+		position: absolute;
+		top: var(--horizontal-offset, 0);
+		right: var(--vertical-offset, 0);
+		bottom: var(--horizontal-offset, 0);
+		left: var(--vertical-offset, 0);
+		transition: transform 0.6s ease;
+		color: $primary;
+
+		&::before {
+			content: '';
+			position: absolute;
+			border: inherit;
+		}
+	}
+
+	&__horizontal {
+		--vertical-offset: calc(var(--offset) * -1);
+		border-top: var(--border-size) solid $primary;
+		border-bottom: var(--border-size) solid $primary;
+
+		&::before {
+			top: calc(var(--vertical-offset) - var(--border-size));
+			bottom: calc(var(--vertical-offset) - var(--border-size));
+			left: calc(var(--vertical-offset) * -1);
+			right: calc(var(--vertical-offset) * -1);
+		}
+	}
+
+	&:hover &__horizontal {
+		transform: scaleX(0);
+	}
+
+	&__vertical {
+		--horizontal-offset: calc(var(--offset) * -1);
+		border-left: var(--border-size) solid currentColor;
+		border-right: var(--border-size) solid currentColor;
+
+		&::before {
+			top: calc(var(--horizontal-offset) * -1);
+			bottom: calc(var(--horizontal-offset) * -1);
+			left: calc(var(--horizontal-offset) - var(--border-size));
+			right: calc(var(--horizontal-offset) - var(--border-size));
+		}
+	}
+
+	&:hover &__vertical {
+		transform: scaleY(0);
+	}
+}

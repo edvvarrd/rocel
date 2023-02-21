@@ -1,1 +1,189 @@
-/*# sourceMappingURL=main.css.map */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.button {
+  --offset: 10px;
+  --border-size: 2px;
+  position: relative;
+  padding: 1em 2em;
+  color: #eeeeee;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  box-shadow: inset 0 0 0 var(--border-size) #ff597b;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(255, 89, 123, 0.1);
+}
+.button__horizontal, .button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.6s ease;
+  color: #ff597b;
+}
+.button__horizontal::before, .button__vertical::before {
+  content: "";
+  position: absolute;
+  border: inherit;
+}
+.button__horizontal {
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid #ff597b;
+  border-bottom: var(--border-size) solid #ff597b;
+}
+.button__horizontal::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--vertical-offset) * -1);
+  right: calc(var(--vertical-offset) * -1);
+}
+.button:hover .button__horizontal {
+  transform: scaleX(0);
+}
+.button__vertical {
+  --horizontal-offset: calc(var(--offset) * -1);
+  border-left: var(--border-size) solid currentColor;
+  border-right: var(--border-size) solid currentColor;
+}
+.button__vertical::before {
+  top: calc(var(--horizontal-offset) * -1);
+  bottom: calc(var(--horizontal-offset) * -1);
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+.button:hover .button__vertical {
+  transform: scaleY(0);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 300;
+}
+
+.nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1em 2em;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 8px 8px;
+}
+.nav a {
+  position: relative;
+  margin: 0 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  overflow: hidden;
+}
+.nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  height: 1px;
+  width: 100%;
+  background-color: #ff597b;
+  transition: transform 0.3s;
+}
+.nav a:hover::before {
+  transform: translateX(100%);
+}
+
+.navbar-toggler {
+  position: fixed;
+  z-index: 20;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  color: #eeeeee;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.section-front__hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/front-page-background.png");
+  background-size: cover;
+  background-position: 46%;
+  background-attachment: fixed;
+}
+.section-front__hero-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+.section-front__hero-heading {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+  text-transform: uppercase;
+}
+.section-front__hero-heading h1 {
+  font-size: 4rem;
+}
+.section-front__hero-heading h1 .name {
+  color: #ff597b;
+}
+.section-front__hero-heading p {
+  margin: 1em;
+  font-weight: 300;
+}
+.section-front__hero-heading .action {
+  margin-top: 2em;
+}
+
+.section-about {
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
