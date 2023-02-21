@@ -92,10 +92,10 @@ html {
 .section__heading::before {
   content: "";
   height: 3px;
-  width: 17px;
+  width: 15px;
   background-color: #ff597b;
   position: absolute;
-  bottom: -4px;
+  bottom: -5px;
 }
 
 body {
@@ -113,10 +113,10 @@ body {
   transform: translateX(-50%);
   padding: 1em 2em;
   background: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  border-left: 1px solid rgba(0, 0, 0, 0.5);
-  border-right: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 89, 123, 0.5);
+  border-left: 1px solid rgba(255, 89, 123, 0.5);
+  border-right: 1px solid rgba(255, 89, 123, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 0 0 8px 8px;
@@ -162,21 +162,21 @@ body {
   cursor: pointer;
 }
 
-.section-front__hero {
+.section-front {
   position: relative;
   height: 100vh;
   background-image: url("../img/front-page-background.png");
   background-size: cover;
   background-position: 46%;
 }
-.section-front__hero-shadow {
+.section-front__shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
-.section-front__hero-heading {
+.section-front__heading {
   position: relative;
   height: 100%;
   display: flex;
@@ -186,16 +186,16 @@ body {
   color: #eeeeee;
   text-transform: uppercase;
 }
-.section-front__hero-heading h1 {
+.section-front__heading h1 {
   font-size: 5rem;
 }
-.section-front__hero-heading h1 .name {
+.section-front__heading h1 .name {
   color: #ff597b;
 }
-.section-front__hero-heading p {
+.section-front__heading p {
   margin: 1em;
 }
-.section-front__hero-heading a {
+.section-front__heading a {
   margin-top: 5em;
 }
 
