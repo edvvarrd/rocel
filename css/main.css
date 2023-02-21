@@ -175,7 +175,6 @@ body {
   background-image: url("../img/front-page-background.png");
   background-size: cover;
   background-position: 46%;
-  background-attachment: fixed;
 }
 .section-front__hero-shadow {
   position: absolute;
@@ -219,6 +218,7 @@ body {
 .section-about__about img {
   border: 1px solid #ff597b;
   margin: 2em 0;
+  box-shadow: -9px 11px 0px 0px rgba(255, 89, 123, 0.75);
 }
 .section-about__about .paragraphs p {
   max-width: 600px;
