@@ -18,7 +18,7 @@ body {
 	transform: translateX(-50%);
 	padding: 1em 2em;
 	z-index: 20;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 0 0 8px 8px;
 	a {
 		position: relative;
@@ -44,13 +44,15 @@ body {
 }
 .navbar-toggler {
 	position: fixed;
-	z-index: 20;
 	top: 1.5rem;
 	right: 1.5rem;
+	padding: 0.2em 0.2em;
 	font-size: 2.5rem;
 	color: $white;
 	border: none;
-	background: none;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 20;
 	cursor: pointer;
 }
 .section-front {
@@ -97,11 +99,12 @@ body {
 	background-color: $white;
 	&__about {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
 		img {
 			border: 1px solid $primary;
-			margin: 0 2em;
+			margin: 2em 0;
 		}
 		.paragraphs {
 			p {
