@@ -235,8 +235,8 @@ body {
   top: 0;
   width: 15px;
   height: 15px;
-  border-top: 2px solid #ff597b;
-  border-left: 2px solid #ff597b;
+  border-top: 2px solid #f9b5d0;
+  border-left: 2px solid #f9b5d0;
 }
 .section-about__about .paragraphs::after {
   content: "";
@@ -245,8 +245,8 @@ body {
   bottom: 0;
   width: 15px;
   height: 15px;
-  border-bottom: 2px solid #ff597b;
-  border-right: 2px solid #ff597b;
+  border-bottom: 2px solid #f9b5d0;
+  border-right: 2px solid #f9b5d0;
 }
 
 .section-projects {
