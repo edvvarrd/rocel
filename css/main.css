@@ -218,11 +218,35 @@ body {
 .section-about__about img {
   border: 1px solid #ff597b;
   margin: 2em 0;
-  box-shadow: -9px 11px 0px 0px rgba(255, 89, 123, 0.75);
+  box-shadow: -10px 10px 0px 0px #f9b5d0;
+}
+.section-about__about .paragraphs {
+  position: relative;
+  padding: 1em 2em;
 }
 .section-about__about .paragraphs p {
   max-width: 600px;
   margin: 2em 1em;
+}
+.section-about__about .paragraphs::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #ff597b;
+  border-left: 2px solid #ff597b;
+}
+.section-about__about .paragraphs::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid #ff597b;
+  border-right: 2px solid #ff597b;
 }
 
 .section-projects {

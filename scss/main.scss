@@ -115,12 +115,34 @@ body {
 		img {
 			border: 1px solid $primary;
 			margin: 2em 0;
-			box-shadow: -9px 11px 0px 0px rgba($primary, 0.75);
+			box-shadow: -10px 10px 0px 0px $secondary;
 		}
 		.paragraphs {
+			position: relative;
+			padding: 1em 2em;
 			p {
 				max-width: 600px;
 				margin: 2em 1em;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 15px;
+				height: 15px;
+				border-top: 2px solid $primary;
+				border-left: 2px solid $primary;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 15px;
+				height: 15px;
+				border-bottom: 2px solid $primary;
+				border-right: 2px solid $primary;
 			}
 		}
 	}
