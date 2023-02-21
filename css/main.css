@@ -15,7 +15,7 @@ html {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1em 1em;
 }
 
 .button {
@@ -199,9 +199,6 @@ body {
   margin-top: 5em;
 }
 
-.section-about {
-  background-color: #eeeeee;
-}
 .section-about__about {
   display: flex;
   flex-direction: column;
