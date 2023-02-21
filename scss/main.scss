@@ -4,7 +4,6 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
-	line-height: 2.6rem;
 	font-weight: 300;
 }
 .nav {
@@ -54,7 +53,7 @@ body {
 	color: $white;
 	border-radius: 8px;
 	background: rgba(0, 0, 0, 0.4);
-	border: 1px solid rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba($primary, 0.5);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(5px);
 	z-index: 20;
@@ -80,10 +79,12 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		color: $white;
 		text-transform: uppercase;
 		h1 {
-			font-size: 5rem;
+			font-size: 3.5rem;
+
 			.name {
 				color: $primary;
 			}
