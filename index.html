@@ -8,14 +8,14 @@
     <title>Rocel Flores - Visual Development Artist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/ec2ee50863.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <main>
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle">
             <i class="fa-sharp fa-solid fa-bars"></i>
         </button>
         <nav class="nav-mobile">
@@ -30,23 +30,23 @@
             <a href="#cv">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
-        <section class="section-front">
-            <div class="section-front__shadow"></div>
-            <div class="section-front__heading">
+        <section class="front">
+            <div class="front__shadow"></div>
+            <div class="front__heading">
                 <h1>Hi, I'm <span class="name">Rocel Flores</span></h1>
                 <p>Visual Development Artist</p>
-                <a class="button" href="#about">Get to know me
-                    <div class="button__horizontal"></div>
-                    <div class="button__vertical"></div>
+                <a class="action" href="#about">Get to know me
+                    <div class="action__horizontal"></div>
+                    <div class="action__vertical"></div>
                 </a>
             </div>
         </section>
-        <section id="about" class="section section-about">
+        <section id="about" class="section about">
             <div class="wrapper">
                 <h1 class="section__heading">About me</h1>
-                <div class="section-about__about">
+                <div class="about__box">
                     <img src="./img/about-avatar.png" alt="Rocel avatar">
-                    <div class="paragraphs">
+                    <div class="about__box-paragraphs">
                         <p>I'm Rocel, Filipino based in Ireland, Kilkenny - visual development artist with a focus on
                             background paint and design.
                             I have a strong interests in colors and composition, I enjoy using colors and light to
@@ -58,9 +58,27 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="section section-projects">
-            <div class="wrapper">
-                <h1 class="section__heading">Projects</h1>
+        <section id="projects" class="section projects">
+            <h1 class="section__heading">Projects</h1>
+            <div class="projects__project projects__project--1">
+                <div class="projects__project-shadow"></div>
+                <div class="wrapper">
+                    <div class="projects__project-text">
+                        <h1>Project title</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi ut illo.</p>
+                    </div>
+                    <a href="#" class="projects__project-action">See more</a>
+                </div>
+            </div>
+            <div class="projects__project projects__project--2">
+                <div class="projects__project-shadow"></div>
+                <div class="wrapper">
+                    <div class="projects__project-text">
+                        <h1>Project title</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi ut illo.</p>
+                    </div>
+                    <a href="#" class="projects__project-action">See more</a>
+                </div>
             </div>
         </section>
     </main>

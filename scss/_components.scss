@@ -1,11 +1,11 @@
 @use 'colors' as *;
 .wrapper {
 	width: 100%;
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 1em 1em;
 }
-.button {
+.action {
 	--offset: 10px;
 	--border-size: 2px;
 	position: relative;

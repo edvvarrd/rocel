@@ -50,7 +50,6 @@ body {
 	padding: 0.2em 0.2em;
 	font-size: 2.5rem;
 	color: $white;
-	border-radius: 8px;
 	background: rgba(0, 0, 0, 0.4);
 	border: 1px solid rgba($primary, 0.5);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -97,7 +96,7 @@ body {
 .show {
 	transform: translateX(-100%);
 }
-.section-front {
+.front {
 	position: relative;
 	height: 100vh;
 	background-image: url('../img/front-page-background.png');
@@ -121,7 +120,8 @@ body {
 		color: $white;
 		text-transform: uppercase;
 		h1 {
-			font-size: 3.5rem;
+			font-size: 3.2rem;
+			padding: 0 0.5em;
 
 			.name {
 				color: $primary;
@@ -135,8 +135,8 @@ body {
 		}
 	}
 }
-.section-about {
-	&__about {
+.about {
+	&__box {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -146,7 +146,7 @@ body {
 			margin: 2em 0;
 			box-shadow: -10px 10px 0px 0px $secondary;
 		}
-		.paragraphs {
+		&-paragraphs {
 			position: relative;
 			padding: 1em 2em;
 			p {
@@ -176,7 +176,55 @@ body {
 		}
 	}
 }
-.section-projects {
-	height: 100vh;
+.projects {
+	min-height: 100vh;
+	&__project {
+		display: flex;
+		align-items: center;
+		position: relative;
+		min-height: 350px;
+		width: 100%;
+		padding: 2em 2em;
+		background-size: cover;
+		background-position: center;
+		color: $white;
+		&--1 {
+			background-image: url('../img/project-1/background.png');
+		}
+		&--2 {
+			background-image: url('../img/project-2/background.png');
+		}
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 5;
+		}
+		&-text {
+			display: flex;
+			flex-direction: column;
+			h1 {
+				font-size: 4rem;
+				text-transform: uppercase;
+				font-weight: 800;
+			}
+			p {
+				margin: 3em 0;
+			}
+		}
+		&-action {
+			align-self: flex-end;
+		}
+		&-shadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 0;
+		}
+	}
 }
 @import 'desktop';
