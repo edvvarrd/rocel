@@ -150,7 +150,7 @@ body {
 		&-paragraphs {
 			position: relative;
 			padding: 1em 1em;
-			margin: 1em 0;
+			margin: 0;
 			p {
 				max-width: 600px;
 				margin: 2em 1em;
@@ -179,7 +179,6 @@ body {
 	}
 }
 .projects {
-	min-height: 100vh;
 	&__project {
 		display: flex;
 		align-items: center;
@@ -216,7 +215,40 @@ body {
 			}
 		}
 		&-action {
+			position: relative;
 			align-self: flex-end;
+			padding: 0.5em 1em;
+			margin-top: 1em;
+			color: $white;
+			font-size: 1.5rem;
+			letter-spacing: 0.2em;
+			font-weight: 500;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: background-color 0.3s;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 15px;
+				height: 15px;
+				border-top: 2px solid $primary;
+				border-left: 2px solid $primary;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 15px;
+				height: 15px;
+				border-bottom: 2px solid $primary;
+				border-right: 2px solid $primary;
+			}
+			&:hover {
+				background-color: rgba($primary, 0.1);
+			}
 		}
 		&-shadow {
 			position: absolute;
@@ -224,7 +256,7 @@ body {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.6);
 			z-index: 0;
 		}
 	}

@@ -9,6 +9,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 36px;
 }
 
 .wrapper {
@@ -79,9 +80,6 @@ html {
   transform: scaleY(0);
 }
 
-.section {
-  padding-bottom: 32px;
-}
 .section__heading {
   position: relative;
   margin: 2em 0;
@@ -255,7 +253,7 @@ body {
 .about__box-paragraphs {
   position: relative;
   padding: 1em 1em;
-  margin: 1em 0;
+  margin: 0;
 }
 .about__box-paragraphs p {
   max-width: 600px;
@@ -282,9 +280,6 @@ body {
   border-right: 2px solid #ff597b;
 }
 
-.projects {
-  min-height: 100vh;
-}
 .projects__project {
   display: flex;
   align-items: center;
@@ -322,7 +317,40 @@ body {
   margin: 2em 0;
 }
 .projects__project-action {
+  position: relative;
   align-self: flex-end;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  color: #eeeeee;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+.projects__project-action::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #ff597b;
+  border-left: 2px solid #ff597b;
+}
+.projects__project-action::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid #ff597b;
+  border-right: 2px solid #ff597b;
+}
+.projects__project-action:hover {
+  background-color: rgba(255, 89, 123, 0.1);
 }
 .projects__project-shadow {
   position: absolute;
@@ -330,7 +358,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
@@ -371,5 +399,6 @@ body {
   }
   .projects__project-action {
     align-self: center;
+    margin-top: 0;
   }
 }/*# sourceMappingURL=main.css.map */
