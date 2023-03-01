@@ -311,7 +311,7 @@ body {
 .projects__project-text h1 {
   font-size: 4rem;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 500;
 }
 .projects__project-text p {
   margin: 2em 0;
