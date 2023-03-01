@@ -121,6 +121,7 @@ body {
 		text-transform: uppercase;
 		h1 {
 			font-size: 3.2rem;
+			font-weight: 500;
 			padding: 0 0.5em;
 
 			.name {
@@ -148,7 +149,8 @@ body {
 		}
 		&-paragraphs {
 			position: relative;
-			padding: 1em 2em;
+			padding: 1em 1em;
+			margin: 1em 0;
 			p {
 				max-width: 600px;
 				margin: 2em 1em;
@@ -210,7 +212,7 @@ body {
 				font-weight: 800;
 			}
 			p {
-				margin: 3em 0;
+				margin: 2em 0;
 			}
 		}
 		&-action {

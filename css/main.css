@@ -228,6 +228,7 @@ body {
 }
 .front__heading h1 {
   font-size: 3.2rem;
+  font-weight: 500;
   padding: 0 0.5em;
 }
 .front__heading h1 .name {
@@ -253,7 +254,8 @@ body {
 }
 .about__box-paragraphs {
   position: relative;
-  padding: 1em 2em;
+  padding: 1em 1em;
+  margin: 1em 0;
 }
 .about__box-paragraphs p {
   max-width: 600px;
@@ -317,7 +319,7 @@ body {
   font-weight: 800;
 }
 .projects__project-text p {
-  margin: 3em 0;
+  margin: 2em 0;
 }
 .projects__project-action {
   align-self: flex-end;
